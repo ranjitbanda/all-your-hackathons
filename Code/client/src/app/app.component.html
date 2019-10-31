@@ -1,0 +1,54 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12 col-md-12">
+      <div class="card">
+        <div class="header">
+          <h4 class="title">&nbsp;&nbsp; Test</h4>
+        </div>
+        <div class="content">
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <div class="form-group">
+                <label></label>
+                <input type="text" class="form-control border-input" name="txtSpeechSearchMovieName" id="txtSpeechSearchMovieName" value=""
+                       placeholder="Click below button and then say something!!!" [(ngModel)]="speechData">
+              </div>
+            </div>
+            <div class="col-md-2"></div>
+          </div>
+          <br />
+          <div class="text-center">
+            <button class="btn btn-info btn-fill btn-wd" name="activateSpeechSearch" id="btnActivateSpeechSearch" (click)="activateSpeechSearch()"
+                    [disabled]="!showSearchButton">
+              Start
+            </button> &nbsp;&nbsp;
+            <button class="btn btn-info btn-fill btn-wd" name="deActivateSpeechSearch" id="btnDeActivateSpeechSearch" (click)="deActivateSpeechSearch()"
+                    [disabled]="showSearchButton">
+              Stop
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align:left">
+  <p> <span> <input [(ngModel)]="rawAddress" type="text"> </span></p>
+  <p> <span><button (click)="submit()">Submit</button></span></p>
+</div>
+
+<div style="text-align:left" *ngIf="formattedAddress$">
+  <p> <span *ngIf="formattedAddress$.InputAddress">Input: {{ formattedAddress$.InputAddress }}</span></p>
+  <p> <span *ngIf="formattedAddress$.House">HouseNumber: {{ formattedAddress$.House }}</span></p>
+  <p> <span *ngIf="formattedAddress$.Unit">Unit: {{ formattedAddress$.Unit }}</span></p>
+  <p> <span *ngIf="formattedAddress$.StreetName">StreetName: {{ formattedAddress$.StreetName }}</span></p>
+  <p> <span *ngIf="formattedAddress$.City">City: {{ formattedAddress$.City  }}</span></p>
+  <p> <span *ngIf="formattedAddress$.State">State: {{ formattedAddress$.State  }}</span></p>
+  <p> <span *ngIf="formattedAddress$.Country">Country: {{ formattedAddress$.Country  }}</span></p>
+  <p> <span *ngIf="formattedAddress$.PinCode">Pincode: {{ formattedAddress$.PinCode }}</span></p>
+</div>
+ 
+<router-outlet></router-outlet>
