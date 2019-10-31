@@ -1,3 +1,14 @@
+#Huge AI training data files
+address_parser_crf.dat
+address_parser_phrases.dat
+address_parser_postal_codes.dat
+address_parser_vocab.trie
+language_classifier.dat
+
+
+#HJSplit EXE
+hjsplit.exe
+
 # Logs
 logs
 *.log

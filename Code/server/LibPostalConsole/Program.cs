@@ -17,22 +17,22 @@ namespace LibPostalConsole
         /// <param name="args">args[0] should be the path to libpostal data files</param>
         private static void Main(string[] args)
         {
-            if (args.Length > 0)
-            {
-                string dataPath = args[0];
-                dataPath = "..\\..\\..\\..\\libpostal";
+            //if (args.Length > 0)
+            //{
+                //string dataPath = args[0];
+                string dataPath = "..\\..\\..\\..\\libpostal";
 
 
                 libpostal.LibpostalSetupDatadir(dataPath);
                 libpostal.LibpostalSetupParserDatadir(dataPath);
                 libpostal.LibpostalSetupLanguageClassifierDatadir(dataPath);
-            }
-            else
-            {
-                libpostal.LibpostalSetup();
-                libpostal.LibpostalSetupParser();
-                libpostal.LibpostalSetupLanguageClassifier();
-            }
+            //}
+            //else
+            //{
+            //    libpostal.LibpostalSetup();
+            //    libpostal.LibpostalSetupParser();
+            //    libpostal.LibpostalSetupLanguageClassifier();
+            //}
 
             //string myInputFile = Path.Combine(Path.GetTempPath(), String.Concat("INPUT", "SaveFile2.txt"));
 
